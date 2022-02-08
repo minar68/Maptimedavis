@@ -14,7 +14,6 @@
       </svg>
   </div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="script.js"></script>
 <script>
   var population = [400, 600, 100];
 d3.selectAll('rect')
