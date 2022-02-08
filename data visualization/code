@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>A D3 chart</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+   
+  <script>
+  var pop= [400, 3000, 600, 100]
+  var svg= d3.select('body')
+            .append('svg')
+              .attr('width', 500)
+              .attr('height', 150)
+
+
+svg.selectAll('rect')
+  .data(pop)
+  .enter()
+  .append('rect')
+    .attr('x', function(d, i){
+      return i * 25;
+    })
+    .attr('width', 15)
+    .attr('fill', '#d1c9b8')
+    .attr('height', function(d){
+      return d/10 * 1.5;
+    })
+    .attr('y', function(d){
+      return 150 - d/10 * 1.5;
+    });
+		</script>
+    </body>
+    </html>
